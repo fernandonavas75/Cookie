@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mórdika · Galletas artesanales</title>
+  <meta name="description" content="Galletas artesanales horneadas a mano en Ecuador. Arma tu cajita: tú eliges tamaño, sabores y dips. Pedido directo por WhatsApp." />
+  <meta property="og:title" content="Mórdika · Galletas artesanales" />
+  <meta property="og:description" content="Arma tu cajita: elige tamaño, sabores y dips. Pedido directo por WhatsApp." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body data-route="home">
+
+  <svg hidden aria-hidden="true" focusable="false">
+    <symbol id="icon-wa" viewBox="0 0 24 24">
+      <path d="M17.6 6.32A7.9 7.9 0 0 0 12 4a7.94 7.94 0 0 0-6.78 12.05L4 21l5.07-1.33A7.94 7.94 0 0 0 12 20a7.94 7.94 0 0 0 7.94-7.94 7.9 7.9 0 0 0-2.34-5.74Zm-5.6 12.2a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.95.77.79-2.88-.16-.25a6.6 6.6 0 0 1 10.27-8.06 6.55 6.55 0 0 1 1.93 4.66 6.6 6.6 0 0 1-6.28 6.82Zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65s-.31-.1-.45.1-.51.65-.62.78-.23.14-.43.05a5.4 5.4 0 0 1-1.6-.99 6 6 0 0 1-1.1-1.37c-.12-.2-.01-.3.09-.4s.2-.23.3-.35a1.4 1.4 0 0 0 .2-.34.37.37 0 0 0 0-.36c0-.1-.45-1.08-.62-1.48s-.33-.34-.45-.34h-.39a.74.74 0 0 0-.54.25 2.26 2.26 0 0 0-.71 1.69 3.92 3.92 0 0 0 .82 2.09 9 9 0 0 0 3.43 3.04c.48.2.85.32 1.14.41a2.76 2.76 0 0 0 1.26.08 2.06 2.06 0 0 0 1.36-.96 1.69 1.69 0 0 0 .12-.96c-.05-.09-.18-.14-.38-.24Z"/>
+    </symbol>
+  </svg>
+
+  <!-- Floating cart pill (visible only when items selected) -->
+  <button class="cart-pill" id="cartPill" type="button">
+    Tu cajita <span class="cart-pill__count" id="cartPillCount">0</span>
+  </button>
+
+  <!-- ════════════════════════════════════════════════
+       HOME SCREEN
+       ════════════════════════════════════════════════ -->
+  <div class="home-screen">
+
+    <!-- Nav -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#" data-nav="home">
+          <div class="brand__mark">m</div>
+          <div class="brand__name">Mórd<em>i</em>ka</div>
+        </a>
+        <div class="nav__links">
+          <a href="#formatos">Formatos</a>
+          <a href="#sabores">Sabores</a>
+          <a href="#galeria">Galería</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <button class="btn btn--gold" data-nav="pedir" style="border:0">
+          <svg class="wa-ico" width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#icon-wa"/></svg>
+          Pedir ahora
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+      <div class="container hero__grid">
+        <div>
+          <div class="eyebrow">Pastelería artesanal · Ecuador</div>
+          <h1 class="hero__title">
+            Galletas <em>horneadas</em><br>
+            a mano,<br>
+            armadas a tu <em>medida</em>.
+          </h1>
+          <p class="hero__lede">
+            Cada cajita de Mórdika se hornea bajo pedido: tú eliges el tamaño, los sabores, el dip.
+            Nosotros nos encargamos de que llegue tibia, suave por dentro y crujiente por fuera.
+          </p>
+          <div class="hero__cta">
+            <button class="btn btn--gold" data-nav="pedir">Armar mi cajita</button>
+            <a class="btn btn--ghost" href="#sabores">Ver sabores</a>
+          </div>
+          <div class="hero__meta">
+            <div><b>21+</b> sabores</div>
+            <div><b>2</b> tamaños</div>
+            <div><b>5</b> dips</div>
+            <div><b>0962 791 136</b></div>
+          </div>
+        </div>
+        <div class="hero__stack" aria-hidden="true">
+          <div class="cookie cookie--1"></div>
+          <div class="cookie cookie--2"></div>
+          <div class="cookie cookie--3"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="divider-line"></div>
+
+    <!-- Formats -->
+    <section class="section" id="formatos">
+      <div class="container">
+        <div class="section__head">
+          <div class="eyebrow">Formatos de venta</div>
+          <h2 class="section__title">Una mano. <em>Media mano.</em><br>Tú eliges la medida.</h2>
+          <p style="color:rgba(246,240,228,0.65); max-width:56ch">
+            Las galletas de tamaño regular son del porte de una mano —
+            las mini, perfectas para compartir o probar varios sabores en una sola cajita.
+          </p>
+        </div>
+        <div class="formats__grid" id="formatsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Flavors (cream section) -->
+    <section class="section section--cream" id="sabores" style="padding-top:110px; padding-bottom:110px">
+      <div class="container">
+        <div class="flavors__head">
+          <div>
+            <div class="eyebrow" style="color:var(--gold-2)">El menú</div>
+            <h2 class="flavors__title" style="color:var(--ink)">Veintiún <em>sabores</em>, una sola galleta.</h2>
+          </div>
+        </div>
+        <div id="flavorsContainer"></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section__head">
+          <div class="eyebrow">Galería</div>
+          <h2 class="section__title">Recién <em>horneadas</em>.</h2>
+        </div>
+        <div class="gallery">
+          <div class="gallery__item gallery__item--feature">
+            <div class="placeholder-stripes"></div>
+            <div class="placeholder-num">01</div>
+            <div class="placeholder-label">— cajita de 12 —</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-stripes"></div>
+            <div class="placeholder-num">02</div>
+            <div class="placeholder-label">— red velvet —</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-stripes"></div>
+            <div class="placeholder-num">03</div>
+            <div class="placeholder-label">— dip de Nutella —</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-stripes"></div>
+            <div class="placeholder-num">04</div>
+            <div class="placeholder-label">— horneado —</div>
+          </div>
+          <div class="gallery__item">
+            <div class="placeholder-stripes"></div>
+            <div class="placeholder-num">05</div>
+            <div class="placeholder-label">— estilo fogata —</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--cream" id="faq">
+      <div class="container" style="max-width:880px">
+        <div class="section__head">
+          <div class="eyebrow" style="color:var(--gold-2)">Preguntas frecuentes</div>
+          <h2 class="section__title" style="color:var(--ink)">Lo que <em>siempre</em> nos preguntan.</h2>
+        </div>
+        <div class="faq__list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- CTA band -->
+    <section class="cta-band" id="pedir">
+      <div class="container">
+        <div class="eyebrow">Listos para hornear</div>
+        <h2>Una cajita lista en <em>un par de clics</em>.</h2>
+        <p>Arma tu pedido aquí, lo enviamos a WhatsApp con todo en orden y nosotros confirmamos hora de entrega.</p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap">
+          <button class="btn btn--gold" data-nav="pedir">Armar mi cajita</button>
+          <a class="btn btn--ghost" id="ctaWhatsappDirect" target="_blank" rel="noreferrer">
+            <svg class="wa-ico" width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#icon-wa"/></svg>
+            Escribir directo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <a class="brand" href="#" data-nav="home" style="margin-bottom:16px">
+              <div class="brand__mark">m</div>
+              <div class="brand__name">Mórd<em>i</em>ka</div>
+            </a>
+            <p style="max-width:38ch">
+              Galletas artesanales horneadas en Ecuador.
+              Cada pedido es único — armado contigo, hecho para ti.
+            </p>
+          </div>
+          <div class="footer__col">
+            <h4>Pedidos</h4>
+            <a href="https://wa.me/593962791136" target="_blank" rel="noreferrer">+593 96 279 1136</a>
+            <a href="https://instagram.com/m_mordika" target="_blank" rel="noreferrer">@m_mordika</a>
+          </div>
+          <div class="footer__col">
+            <h4>Síguenos</h4>
+            <a href="https://instagram.com/m_mordika" target="_blank" rel="noreferrer" style="display:inline-flex; align-items:center; gap:8px">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div class="footer__bot">
+          <span>© 2026 Mórdika · Ecuador</span>
+          <span>Hecho con amor</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ════════════════════════════════════════════════
+       BUILDER SCREEN — /#pedir
+       ════════════════════════════════════════════════ -->
+  <div class="builder">
+    <header class="builder__nav">
+      <div class="builder__nav-inner">
+        <button class="builder__back" data-nav="home">← Volver</button>
+        <a class="brand" href="#" data-nav="home">
+          <div class="brand__mark">m</div>
+          <div class="brand__name">Mórd<em>i</em>ka</div>
+        </a>
+        <div class="builder__step-pill" id="stepPill">
+          <span class="is-on">1</span>
+          <span>2</span>
+          <span>3</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="builder__layout">
+      <main class="builder__main">
+        <div class="builder__hero">
+          <div class="eyebrow" style="color:var(--gold-2)">Arma tu cajita</div>
+          <h1 class="builder__title">Horneamos a tu <em>medida</em>.</h1>
+          <p class="builder__lede">
+            Tres pasos. Cuando termines, te abrimos WhatsApp con tu pedido listo.
+          </p>
+        </div>
+
+        <!-- Step 1 -->
+        <section class="builder__step">
+          <div class="builder__step-num">01</div>
+          <div class="builder__step-title">Elige tu formato</div>
+          <div class="builder__step-sub">Tamaño de una mano, o media mano para compartir.</div>
+          <div id="builderFormats"></div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="builder__step" id="step2" style="display:none">
+          <div class="builder__step-num">02</div>
+          <div class="builder__step-title" id="step2Title">Elige los sabores</div>
+          <div class="builder__step-sub">Puedes mezclar. Todos los que quepan en tu cajita.</div>
+
+          <div class="builder__counter" id="builderCounter">
+            <div class="builder__counter-label">Llevas</div>
+            <div class="builder__counter-num"><span id="counterPicked">0</span> <span id="counterTotal">/ 0</span></div>
+            <div class="builder__counter-bar"><div id="counterBar" style="width:0%"></div></div>
+          </div>
+
+          <div id="builderFlavors"></div>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="builder__step" id="step3" style="display:none">
+          <div class="builder__step-num">03</div>
+          <div class="builder__step-title">¿Dips y detalles?</div>
+          <div class="builder__step-sub">Opcional. +$0.75 por unidad.</div>
+
+          <div class="builder__dips" id="builderDips"></div>
+
+          <div class="builder__form">
+            <label>
+              <span>Tu nombre</span>
+              <input type="text" id="formName" placeholder="Cómo te llamamos" />
+            </label>
+            <label>
+              <span>Notas (opcional)</span>
+              <textarea id="formNotes" rows="3" placeholder="Fecha de entrega, alergias, mensaje en la caja..."></textarea>
+            </label>
+          </div>
+        </section>
+      </main>
+
+      <aside class="builder__summary">
+        <div class="builder__summary-inner">
+          <div class="builder__summary-head">
+            <div class="eyebrow" style="color:var(--gold-2)">Tu pedido</div>
+            <div class="builder__summary-title" id="summaryTitle">Sin formato</div>
+            <div class="builder__summary-sub" id="summarySub" style="display:none"></div>
+          </div>
+
+          <div class="builder__summary-box">
+            <div class="box-preview" id="boxPreview">
+              <div class="box-preview is-empty">
+                <div class="box-preview__empty">
+                  <div>Elige un formato</div>
+                  <div class="mono">para comenzar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="builder__summary-list" id="summaryList" style="display:none"></div>
+
+          <div class="builder__summary-totals">
+            <div class="builder__summary-row"><span>Cajita</span><span id="summaryBoxPrice">$0.00</span></div>
+            <div class="builder__summary-row" id="summaryDipsRow" style="display:none"><span id="summaryDipsLabel">Dips (0)</span><span id="summaryDipsPrice">$0.00</span></div>
+            <div class="builder__summary-row is-total"><span>Total</span><b id="summaryTotal">$0.00</b></div>
+          </div>
+
+          <button class="btn btn--gold builder__send" id="sendBtn" disabled>
+            <svg class="wa-ico" width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#icon-wa"/></svg>
+            <span id="sendBtnLabel">Elige formato</span>
+          </button>
+          <p class="builder__fine">Abre WhatsApp con tu pedido listo. Confirmas con un toque.</p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="builder__mobile-foot">
+      <div>
+        <div class="mono" style="font-size:10px; letter-spacing:0.1em; color:var(--gold-2)">TOTAL</div>
+        <div style="font-family:var(--serif); font-size:22px" id="mobileTotal">$0.00</div>
+      </div>
+      <button class="btn btn--gold" id="mobileSendBtn" disabled>
+        <svg class="wa-ico" width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#icon-wa"/></svg>
+        <span id="mobileSendLabel">Elige</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>
